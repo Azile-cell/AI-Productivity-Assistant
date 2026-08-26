@@ -1,3 +1,4 @@
+'use client'
 import { AlertTriangle, CheckCircle2, LockKeyhole, ShieldCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { PageContainer, PageHeader, ResponsibleNote } from '@/components/page-shell'
