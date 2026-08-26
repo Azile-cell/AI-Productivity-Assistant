@@ -1,5 +1,5 @@
 // Shared request/response contracts for the WorkFlow AI application.
-// These are used by both the client and the secure /api/ai route.
+// These contracts are used by the local no-API demo engine and UI components.
 
 export type FeatureId =
   | 'email'
@@ -99,7 +99,7 @@ export interface ResearchResult {
   keyInsights: string[]
   considerations: string[]
   recommendation: string
-  sourceBasis: 'User-supplied material' | 'General AI knowledge — independently verify important claims'
+  sourceBasis: 'User-supplied material' | 'No external source — research framework only'
 }
 
 export interface WorkspaceRequest {

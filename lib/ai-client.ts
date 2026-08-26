@@ -1,27 +1,32 @@
 import type { FeatureContract } from './types'
+import {
+  generateEmail,
+  organizeWorkspace,
+  planTasks,
+  researchBrief,
+  summarizeMeeting,
+} from './local-engine'
 
-// Typed client for the secure /api/ai route. The API key never touches
-// the client — this only sends the selected feature and user inputs.
+// Local, deterministic demo engine. No external API, API key, billing account,
+// network request, or server-side AI service is required.
 export async function runFeature<K extends keyof FeatureContract>(
   feature: K,
   input: FeatureContract[K]['input'],
 ): Promise<FeatureContract[K]['output']> {
-  const res = await fetch('/api/ai', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ feature, input }),
-  })
+  await new Promise((resolve) => setTimeout(resolve, 250))
 
-  let payload: { data?: FeatureContract[K]['output']; error?: string } = {}
-  try {
-    payload = await res.json()
-  } catch {
-    throw new Error('Unexpected response from the AI service.')
+  switch (feature) {
+    case 'email':
+      return generateEmail(input as FeatureContract['email']['input']) as FeatureContract[K]['output']
+    case 'meeting':
+      return summarizeMeeting(input as FeatureContract['meeting']['input']) as FeatureContract[K]['output']
+    case 'planner':
+      return planTasks(input as FeatureContract['planner']['input']) as FeatureContract[K]['output']
+    case 'research':
+      return researchBrief(input as FeatureContract['research']['input']) as FeatureContract[K]['output']
+    case 'workspace':
+      return organizeWorkspace(input as FeatureContract['workspace']['input']) as FeatureContract[K]['output']
+    default:
+      throw new Error('Unknown feature.')
   }
-
-  if (!res.ok || !payload.data) {
-    throw new Error(payload.error || 'The AI service could not complete this request.')
-  }
-
-  return payload.data
 }

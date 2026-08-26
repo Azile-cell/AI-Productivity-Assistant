@@ -153,7 +153,7 @@ export function ResearchTool() {
                 <p className="text-xs text-muted-foreground">
                   {usingSource
                     ? 'Brief will be grounded in your supplied material.'
-                    : 'No source supplied — the brief will use general AI knowledge and flag what to verify.'}
+                    : 'No source supplied — the tool will return a research framework instead of inventing facts.'}
                 </p>
               </Field>
 
@@ -238,9 +238,7 @@ export function ResearchTool() {
           </Card>
 
           <ResponsibleNote>
-            This assistant has no live web access. Without supplied source material, briefs rely on
-            general AI knowledge that may be outdated or incomplete — independently verify important
-            claims, especially for financial, legal, medical, or safety topics.
+            This no-API research tool does not browse the web. Paste source material for a grounded summary; without a source it returns a research plan instead of generating unsupported factual claims.
           </ResponsibleNote>
         </div>
       </div>

@@ -69,7 +69,7 @@ export function Dashboard() {
       <section className="mb-8 overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-primary/15 via-card to-card p-6 sm:p-8">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
           <Sparkles className="size-3.5" />
-          AI workplace assistant
+          AI Skills Programme prototype
         </span>
         <h1 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
           Do focused work faster with WorkFlow AI
@@ -124,7 +124,7 @@ export function Dashboard() {
       {/* Tools */}
       <section className="mb-8">
         <h2 className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-          AI tools
+          Productivity tools
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {TOOLS.map((tool) => (
@@ -147,8 +147,7 @@ export function Dashboard() {
       </section>
 
       <ResponsibleNote>
-        WorkFlow AI supports your judgement — it does not replace it. Outputs are generated from the
-        information you provide and may contain errors. Always review important communications,
+        WorkFlow AI is running in no-API local demo mode. Outputs are created from the information you provide using transparent rules and templates, and may still require review. Always review important communications,
         decisions, and facts before acting on them.
       </ResponsibleNote>
     </div>

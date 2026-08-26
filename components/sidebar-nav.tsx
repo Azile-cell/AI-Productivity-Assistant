@@ -21,7 +21,7 @@ export const NAV_GROUPS = [
     items: [{ href: '/', label: 'Dashboard', icon: LayoutDashboard }],
   },
   {
-    label: 'AI Tools',
+    label: 'Tools',
     items: [
       { href: '/email', label: 'Email Generator', icon: Mail },
       { href: '/meetings', label: 'Meeting Summarizer', icon: FileText },

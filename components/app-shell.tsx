@@ -40,7 +40,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <SidebarNav />
         </div>
         <div className="border-t border-border px-5 py-3 text-xs text-muted-foreground">
-          Powered by Claude · Anthropic
+          Local demo · No external API
         </div>
       </aside>
 
