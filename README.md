@@ -9,12 +9,12 @@ Professionals spend significant time drafting routine emails, organizing meeting
 The deployed version uses a transparent local rules-and-templates engine. Nothing requires Claude, Gemini, OpenAI, an API key or a billing account.
 
 ## Features
-- Smart Email Generator — audience/tone templates grounded only in entered facts
-- Meeting Notes Summarizer — extracts discussion, explicit decisions and action items
-- Task Planner — prioritizes tasks and builds a time-blocked draft schedule
-- Research Assistant — summarizes user-supplied evidence; without a source it gives a research framework instead of inventing facts
-- Workplace Assistant — locally routes requests to the best specialist tool
-- Smart Workspace — classifies messy workplace notes into emails, tasks, meetings, research and missing information
+- Smart Email Generator - audience/tone templates grounded only in entered facts
+- Meeting Notes Summarizer - extracts discussion, explicit decisions and action items
+- Task Planner - prioritizes tasks and builds a time-blocked draft schedule
+- Research Assistant - summarizes user-supplied evidence; without a source, it gives a research framework instead of inventing facts
+- Workplace Assistant - locally routes requests to the best specialist tool
+- Smart Workspace - classifies messy workplace notes into emails, tasks, meetings, research and missing information
 - Local activity history
 - Responsible AI / prototype-safety page
 
@@ -59,13 +59,13 @@ Then open `http://localhost:3000`.
 
 ## Project Structure
 - `app/` — application pages
-- `components/tools/` — specialist productivity interfaces
-- `lib/local-engine.ts` — no-API local workflow logic
-- `lib/prompts.ts` — prompt-engineering blueprints/documentation
-- `lib/ai-client.ts` — local feature adapter
-- `lib/activity.ts` — browser activity/history storage
-- `lib/prefill.ts` — Smart Workspace tool handoff
-- `lib/types.ts` — shared contracts
+- `components/tools/` - specialist productivity interfaces
+- `lib/local-engine.ts` - no-API local workflow logic
+- `lib/prompts.ts` - prompt-engineering blueprints/documentation
+- `lib/ai-client.ts` - local feature adapter
+- `lib/activity.ts` - browser activity/history storage
+- `lib/prefill.ts` - Smart Workspace tool handoff
+- `lib/types.ts` - shared contracts
 
 ## Limitations
 - This version deliberately does not use a generative-model API.
