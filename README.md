@@ -112,3 +112,4 @@ Then open `http://localhost:3000`.
 - Calendar/email integrations with explicit user permission
 - Export to PDF or DOCX
 - Team workspaces and organization policies
+- Built for the CAPACITI AI Skills Programme
